@@ -10,16 +10,21 @@ import './styles.css';
 
 const Cards = (props) => {
 
-  const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0});
 
   const handleResize = () => {
     setDimensions({ width: window.innerWidth, height: window.innerHeight });
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      window.addEventListener('resize', handleResize);
+    }
     return () => {
-      window.removeEventListener('resize', handleResize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
     };
   }, []);
 
