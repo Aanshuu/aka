@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLargeFill } from "react-icons/ri";
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,9 @@ const Navbar = () => {
   return (
     <div className="bg-[#0C090A] text-black py-4 flex flex-col transition-all duration-300 ease-in-out">
       <div className="container mx-auto flex justify-between items-center">
-        <span className="text-3xl font-bold p-5 text-blue-500 font-urban md:ml-40 text-nowrap">A K A</span>
-        
+        <Link href="/">
+          <span className="text-3xl font-bold p-5 text-blue-500 font-urban md:ml-40 text-nowrap">A K A</span>
+        </Link>
         {/* Hamburger menu for mobile */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-blue-500 focus:outline-none p-5">
