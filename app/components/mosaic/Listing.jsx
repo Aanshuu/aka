@@ -3,7 +3,7 @@ import Feature from "./Feature";
 import { motion } from "framer-motion";
 
 const Listing = ({ data, open }) => {
-  const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } = data;
+  const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace, link } = data;
   const handleClick = () => {
     alert('Icon clicked!');
   };
@@ -22,7 +22,7 @@ const Listing = ({ data, open }) => {
         <div className="text-gray-600">{address}</div>
         <div className="flex items-center">
           <Feature iconName="FaGithub" onClick={handleClick}/>
-          <Feature iconName="FaLink" iconLabel={livingSpace} onClick={() => window.open('https://google.com', '_blank')}/>
+          <Feature iconName="FaLink" iconLabel={livingSpace} onClick={() => window.open(link, '_blank')}/>
         </div>
       </div>
     </motion.div>

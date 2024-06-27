@@ -4,7 +4,7 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 
 const Modal = ({ data, close }) => {
-  const { imageUrl, price, address, description, numBedroom, numWashrooms, livingSpace } = data;
+  const { imageUrl, price, address, description, numBedroom, numWashrooms, livingSpace, link } = data;
 
   const modalVariants = {
     open: { opacity: 1, transition: { staggerChildren: 0.5, delayChildren: 0.2 } },
@@ -35,7 +35,7 @@ const Modal = ({ data, close }) => {
         <motion.div className="flex items-center" variants={modalRowVariants}>
           <Feature iconName="FaGithub"/>
           {/* <Feature iconName="FaShower" iconLabel={numWashrooms} /> */}
-          <Feature iconName="FaLink" iconLabel={livingSpace} onClick={() => window.open('https://google.com', '_blank')}/>
+          <Feature iconName="FaLink" iconLabel={livingSpace} onClick={() => window.open(link, '_blank')}/>
         </motion.div>
         <motion.div className="mt-4 overflow-y-auto" variants={modalRowVariants}>
           <p className="text-lg text-gray-600">{description}</p>
