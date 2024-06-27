@@ -22,7 +22,7 @@ const krishna = () => {
         Management & Marketing
       </p>
     </div>
-    <hr className='m-40 border-t-2 border-white-800'/>
+    <hr className='m-24 md:m-40 border-t-2 border-white-800'/>
     <div className="flex justify-center items-center">
       <div className="flex flex-col md:flex-row md:items-start gap-20 max-w-4xl">
         <div className="flex justify-center md:justify-end w-full md:w-auto">
@@ -35,7 +35,7 @@ const krishna = () => {
         </div>
       </div>
     </div>
-    <hr className='m-40 border-t-2 border-white-800'/>
+    <hr className='m-24 md:m-40 border-t-2 border-white-800'/>
     <div>
       <h2 className="text-3xl text-center mb-10 text-white">Skills</h2>
       <div className="flex flex-wrap justify-center">
@@ -45,7 +45,7 @@ const krishna = () => {
       </div>
     </div>
     
-    <hr className='m-40 border-t-2 border-white-800'/>
+    <hr className='m-24 md:m-40 border-t-2 border-white-800'/>
     </main>
   )
 }
